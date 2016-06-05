@@ -1,0 +1,95 @@
+﻿@using DataAccessLayer
+@model List<AmoghSystems.Models.TrainingCourseModel>
+
+@{
+    ViewBag.Title = "Prodigy Consulting - Software Products";
+}
+
+@section MetaDataContent{
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="TheProdigyConsulting.com - Training Details" />
+    <meta name="keywords" content="IT Training, Agile Training, Software Architecture Training details" />
+    <meta name="author" content="Babu Govindarajan" />
+}
+
+<div class="row container">
+    <div id="ITTrainingDetails">
+        <div class="col-md-12">
+            @foreach (AmoghSystems.Models.TrainingCourseModel tcm in Model)
+            {
+                <div>
+                    <h4 class="text-primary">
+                        <b>@tcm.SubjectName</b>
+                    </h4>
+                </div> <!-- Model Header-->
+
+                <div class="text-primary">
+                    <b>Pre-Requisites</b>
+                </div>
+                <div>
+                    <ul>
+                        @foreach (var pr in tcm.PreRequisites)
+                        {
+                            <li>@pr</li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="text-primary">
+                    <b>Syllabus</b>
+                </div>
+                <div>
+                    <ul>
+                        @foreach (var tss in tcm.Syllabuses)
+                        {
+                            <li>@tss</li>
+                        }
+                    </ul>
+                </div>
+                <div class="text-primary">
+                    <b>Duration</b> 
+                </div>
+                <div>
+                    <ul>
+                        @foreach (string tcd in tcm.Durations)
+                        {
+                            <li>@tcd</li>
+                        }
+                    </ul>
+                </div>
+                <div class="text-primary">
+                    <b> Location</b>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            @tcm.Location
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-primary">
+                    <b> Start Date</b>
+                </div>
+                <ul>
+                    <li>
+                        @tcm.StartDate.ToLongDateString()
+                    </li>
+                </ul>   
+                                
+                <div class="text-primary">
+                    <b> End Date</b>
+                </div>
+                <ul>
+                    <li>
+                        @tcm.EndDate.ToLongDateString()
+                    </li>
+                </ul>                               
+            <br />
+
+                <div>
+                    <a href="~/Training/Register/@tcm.TrainingCouseId/@tcm.TrainingSubjectId" class="btn btn-primary">Register</a>
+                </div>
+            }
+</div>
+    </div> <!-- ITTrainingDetails -->
+</div>

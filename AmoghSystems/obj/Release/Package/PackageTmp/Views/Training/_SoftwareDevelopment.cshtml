@@ -1,0 +1,89 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Prodigy Consulting</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="modal fade" id="ITTrainingDetails" tabindex="-1" aria-labelledby="ITTrainingLabel"
+         role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h5 class="modal-title text-primary" id="ITTrainingModalLabel"><b> Web Development using ASP.NET MVC</b></h5>
+                </div> <!-- Model Header-->
+
+                <div class="modal-body">
+                    <div class="modal-title text-primary">
+                        Pre-Requisites
+                    </div>
+                    <div>
+                        <ul>
+                            <li>C#</li>
+                            <li>HTML</li>
+                            <li>HTTP Protocol</li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-title text-primary">
+                        Syllabus
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                MVC Controller and Routing
+                            </li>
+                            <li>
+                                Razor View
+                            </li>
+                            <li>
+                                Models
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="modal-title text-primary">
+                        Duration
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                Saturday 10:00AM to 12:00Noon
+                            </li>
+                            <li>
+                                Wednesday 6:00PM to 7:00PM
+                            </li>
+                            <li>
+                                Monday 6:00PM to 7:00PM
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-title text-primary">
+                        Location
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                Bothell, WA
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- Modal Body-->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Enroll</button>
+                </div> <!-- Modal Footer-->
+            </div>
+        </div>
+    </div> <!-- ITTrainingDetails -->
+</body>
+</html>

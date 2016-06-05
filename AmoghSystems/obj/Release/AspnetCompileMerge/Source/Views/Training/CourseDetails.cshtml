@@ -1,0 +1,76 @@
+﻿@using DataAccessLayer
+@model List<DataAccessLayer.TrainingCourse>
+
+
+@{
+    ViewBag.Title = "Prodigy Consulting - Software Products";
+}
+
+@section MetaDataContent{
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="TheProdigyConsulting.com - Software Products" />
+    <meta name="keywords" content="Software Development, IT Consulting, mobile application development" />
+    <meta name="author" content="Babu Govindarajan" />
+}
+
+<div class="row container">
+    <div id="ITTrainingDetails">
+        <div>            
+            @foreach (TrainingCourse tc in Model)
+            {
+                <div>
+                    <h5 class="text-primary"><b> @tc.SubjectDetails.SubjectName</b></h5>
+                </div> <!-- Model Header-->
+    
+                <div class="text-primary">
+                    Pre-Requisites
+                </div>
+                <div>
+                    <ul>
+                        @foreach (TrainingSubjectPreRequisite tspr in tc.SubjectDetails.TrainingSubjectPreRequisites)
+                                    {
+                            <li>@tspr.PreRequisite.Description</li>
+                                    }
+                    </ul>
+                </div>
+
+                <div class="text-primary">
+                    Syllabus
+                </div>
+                <div>
+                    <ul>
+                        @foreach(TrainingSubjectSyllabus tss in tc.SubjectDetails.TrainingSubjectSyllabuses)
+                        {
+                            <li>@tss.Syllabus.Description</li>
+                        }
+                    </ul>
+                </div>
+                <div class="text-primary">
+                    Duration
+                </div>
+                <div>
+                    <ul>
+                        @foreach(TrainingCourseDuration tcd in tc.TrainingCourseDurations)
+                        {
+                            <li>@tcd.Duration.DayTime</li>
+                        }
+                    </ul>
+                </div>
+                <div class="text-primary">
+                    Location
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            @tc.Location
+                        </li>
+                    </ul>
+                </div>
+        }
+
+        <div>
+            <button class="btn btn-primary">Enroll</button>
+        </div>    
+        </div>
+    </div> <!-- ITTrainingDetails -->
+</div>

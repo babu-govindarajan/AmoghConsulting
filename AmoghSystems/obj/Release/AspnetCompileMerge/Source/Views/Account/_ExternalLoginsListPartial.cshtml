@@ -1,0 +1,96 @@
+﻿@using AmoghSystems.Models
+@model ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+<h4>Use another service to log in.</h4>
+<hr />
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=610003729113634&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client:plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (loginProviders.Count() == 0)
+    {
+        <div>
+            <p>
+                There are no external authentication services configured. See <a href="http://go.microsoft.com/fwlink/?LinkId=313242">this article</a>
+                for details on setting up this ASP.NET application to support logging in via external services.
+            </p>
+        </div>
+    }
+    else
+    {
+        using (Html.BeginForm(Model.Action, "Account", new { ReturnUrl = Model.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            <div id="socialLoginList">
+                <p>
+                    @foreach (AuthenticationDescription p in loginProviders)
+                    {
+                        if (p.AuthenticationType.Equals("Facebook"))
+                        {
+                            @*<div class="fb-login-button social-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>*@
+                            <button type="submit" class="btn btn-link" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+
+                                Facebook
+                            </button>
+                        }
+                        if (p.AuthenticationType.Equals("Google"))
+                        {
+                            @*<div class="social-button">
+                                <span id="signinButton">
+                                    <span class="g-signin"
+                                          data-callback="signinCallback"
+                                          data-clientid="47246977016-ttkejegk920l8kmv1lqlq27ufk0jrjve.apps.googleusercontent.com"
+                                          data-cookiepolicy="single_host_origin"
+                                          data-requestvisibleactions="http://schema.org/AddAction"
+                                          data-scope="https://www.googleapis.com/auth/plus.login">
+                                    </span>
+                                </span>
+                            </div>*@
+                            <button type="submit" class="btn btn-link" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">                                
+                            Google
+                            </button>
+                        }
+                        if (p.AuthenticationType.Equals("Twitter"))
+                        {
+                            <div>
+                                <button type="submit" class="btn btn-link" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+                                    <img src="~/Content/Images/sign-in-with-twitter-gray.png" />
+                                </button>
+                            </div>
+                        }
+                        if (p.AuthenticationType.Equals("Microsoft"))
+                        {
+                            <button type="submit" class="btn btn-link" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+                                <img src="~/Content/Images/sign-in-with-MSFT.png" />
+                            </button>
+                        }
+                        if (p.AuthenticationType.Equals("LinkedIn", StringComparison.OrdinalIgnoreCase))
+                        {
+                            <button type="submit" class="btn btn-link" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Log in using your @p.Caption account">
+                                LinkedIn
+                            </button>
+                        }
+                    }
+                </p>
+            </div>
+        }
+    }
+}

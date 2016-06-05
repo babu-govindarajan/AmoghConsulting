@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoghSystems", "AmoghSystems\AmoghSystems.csproj", "{DDFEB395-CC02-4E15-9D5F-6A207BE86211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoghSystems.Tests", "AmoghSystems.Tests\AmoghSystems.Tests.csproj", "{C0C9009F-FE07-46FA-AAA4-959E907960C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{DE7DF921-E713-4B79-8470-E148EF2C148A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInterface", "DatabaseInterface\DatabaseInterface.csproj", "{6D51B9FE-E7A3-418C-BD84-5C202FAE775F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{76664C4B-3AC1-476B-BEB6-95B50C2B163E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{2B0A74E6-E8CF-43FC-976B-143C844ADCEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseImplementation", "DatabaseImplementation\DatabaseImplementation.csproj", "{BE7BF3C0-B151-443A-A086-3AF39D351E68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{82A78613-ACBB-48A1-995B-AD0CE663AC46}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://amoghconsulting.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = DataAccessLayer\\DataAccessLayer.csproj
+		SccProjectTopLevelParentUniqueName0 = AmoghSystems.sln
+		SccProjectName0 = DataAccessLayer
+		SccAuxPath0 = https://amoghconsulting.visualstudio.com/defaultcollection
+		SccLocalPath0 = DataAccessLayer
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = DatabaseInterface\\DatabaseInterface.csproj
+		SccProjectTopLevelParentUniqueName1 = AmoghSystems.sln
+		SccProjectName1 = DatabaseInterface
+		SccAuxPath1 = https://amoghconsulting.visualstudio.com/defaultcollection
+		SccLocalPath1 = DatabaseInterface
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = AmoghSystems\\AmoghSystems.csproj
+		SccProjectTopLevelParentUniqueName2 = AmoghSystems.sln
+		SccProjectName2 = AmoghSystems
+		SccAuxPath2 = https://amoghconsulting.visualstudio.com/defaultcollection
+		SccLocalPath2 = AmoghSystems
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = AmoghSystems.Tests\\AmoghSystems.Tests.csproj
+		SccProjectTopLevelParentUniqueName3 = AmoghSystems.sln
+		SccProjectName3 = AmoghSystems.Tests
+		SccAuxPath3 = https://amoghconsulting.visualstudio.com/defaultcollection
+		SccLocalPath3 = AmoghSystems.Tests
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDFEB395-CC02-4E15-9D5F-6A207BE86211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFEB395-CC02-4E15-9D5F-6A207BE86211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFEB395-CC02-4E15-9D5F-6A207BE86211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFEB395-CC02-4E15-9D5F-6A207BE86211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C9009F-FE07-46FA-AAA4-959E907960C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C9009F-FE07-46FA-AAA4-959E907960C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C9009F-FE07-46FA-AAA4-959E907960C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C9009F-FE07-46FA-AAA4-959E907960C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7DF921-E713-4B79-8470-E148EF2C148A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7DF921-E713-4B79-8470-E148EF2C148A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7DF921-E713-4B79-8470-E148EF2C148A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7DF921-E713-4B79-8470-E148EF2C148A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D51B9FE-E7A3-418C-BD84-5C202FAE775F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D51B9FE-E7A3-418C-BD84-5C202FAE775F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D51B9FE-E7A3-418C-BD84-5C202FAE775F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D51B9FE-E7A3-418C-BD84-5C202FAE775F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7BF3C0-B151-443A-A086-3AF39D351E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7BF3C0-B151-443A-A086-3AF39D351E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7BF3C0-B151-443A-A086-3AF39D351E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7BF3C0-B151-443A-A086-3AF39D351E68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE7DF921-E713-4B79-8470-E148EF2C148A} = {76664C4B-3AC1-476B-BEB6-95B50C2B163E}
+		{6D51B9FE-E7A3-418C-BD84-5C202FAE775F} = {76664C4B-3AC1-476B-BEB6-95B50C2B163E}
+		{DDFEB395-CC02-4E15-9D5F-6A207BE86211} = {76664C4B-3AC1-476B-BEB6-95B50C2B163E}
+		{BE7BF3C0-B151-443A-A086-3AF39D351E68} = {76664C4B-3AC1-476B-BEB6-95B50C2B163E}
+		{C0C9009F-FE07-46FA-AAA4-959E907960C0} = {2B0A74E6-E8CF-43FC-976B-143C844ADCEA}
+	EndGlobalSection
+EndGlobal

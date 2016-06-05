@@ -1,0 +1,198 @@
+﻿@{
+    ViewBag.Title = "Prodigy Consulting - Software Development, Consulting & Training";
+}
+
+@section MetaDataContent
+{
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="TheProdigyConsulting.com - Software Development, Consulting, mobile application development" />
+    <meta name="keywords" content="Software Development, IT Consulting, mobile application development & IT Training" />
+    <meta name="author" content="Babu Govindarajan" />
+}
+
+<div class="carousel slide" id="indexCarousel">
+    <ol class="carousel-indicators">
+        <li  class="active" data-slide-to="0" data-target="#indexCarousel"></li>
+        <li data-slide-to="1" data-target="#indexCarousel"></li>
+        <li data-slide-to="2" data-target="#indexCarousel"></li>
+        <li data-slide-to="3" data-target="#indexCarousel"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div class="item active" id="slide1">
+            <a class="img-responsive" href="#">
+                <img src="~/Content/Images/Solutions.png" />
+            </a>
+        </div>
+
+        <div class="item" id="slide2">
+            <a class="img-responsive" href="#">
+                <img src="~/Content/Images/Training.png" />
+            </a>
+        </div>
+
+        <div class="item" id="slide3">
+            <a class="img-responsive" href="#">
+                <img src="~/Content/Images/AzureCloud.png" />
+            </a>
+        </div>
+
+        <div class="item" id="slide4">
+            <a class="img-responsive" href="#">
+                <img src="~/Content/Images/OpenStack.png" />
+            </a>
+        </div>
+
+    </div> <!-- End of carousel-inner -->
+
+    <!-- Controls -->
+    <a class="left carousel-control" data-slide="prev" href="#indexCarousel"><span class="icon-prev"></span></a>
+    <a class="right carousel-control" data-slide="next" href="#indexCarousel"><span class="icon-next"></span></a>
+
+</div> <!-- End of IndexCarousel -->
+
+<div class="row">
+    <div class="col-md-4">
+        <h3 class="text-primary"><b>Consulting</b></h3>
+
+        <p>
+            Delivering an ideal application for your complex business challenges 
+            often requires a blend of packaged software and custom development. 
+            Prodigy Consulting has the expertise and skill to design, build, manage and
+            maintain the solution for your business needs.
+        </p>
+        
+        <p>
+            Prodigy Consulting does IT Consulting in the following domains:
+        </p>
+
+        <ol>
+            <li>
+                Web Development
+            </li>
+            <li>
+                Private and Public Cloud
+            </li>
+            <li>
+                Mobile Application Development
+            </li>
+            <li>
+                Enterprise Architecture
+            </li>
+        </ol>
+
+        <p>
+            @Html.ActionLink(HttpUtility.HtmlDecode("Learn more &raquo;"), "Consulting", "Home", routeValues: null, htmlAttributes: new { @class="btn btn-primary" })            
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h3 class="text-primary"><b>Solutions</b></h3>
+
+        <p>
+            Our below listed few well tested, proven Frameworks  
+            will enable us to implement reliable solutions at faster phase                        
+        </p>
+        <ol>
+            <li>
+                Online Payment Processing
+            </li>
+            <li>
+                Online Invoicing Application
+            </li>
+            <li>
+                Employee Time Management Application
+            </li>
+            <li>
+                Project Tracking
+            </li>
+        </ol>
+                
+        <p>
+            @Html.ActionLink(HttpUtility.HtmlDecode("Learn more &raquo;"), "Products", "Home", routeValues: null, htmlAttributes: new { @class = "btn btn-primary" })            
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        <h3 class="text-primary"><b>Training</b></h3>
+
+        <p>
+            Prodigy Consulting provides on-line, in-class and on-site training you need to
+            help you master in the following domains:
+        </p>
+        <ol>
+            <li>
+                Microsoft Technologies
+            </li>
+            <li>
+                Java Technologies
+            </li>
+            <li>
+                Android Platform
+            </li>
+            <li>
+                iOS Development
+            </li>
+            <li>
+                Agile Methodologies
+            </li>
+            <li>
+                Enterprise Architecture
+            </li>
+        </ol>            
+        <p>
+            Once you successfully complete our training, you can also volunteer to work in our products and services to gain your experience.
+        </p>
+
+        <p>
+            @Html.ActionLink(HttpUtility.HtmlDecode("Learn more &raquo;"), "Index", "Training", routeValues: null, htmlAttributes: new { @class = "btn btn-primary" })            
+        </p>
+    </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="TOGAF Certified Enterprise Architect" 
+                                            src="~/Content/Images/TOGAF-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We use CSS3 in our Web Design" 
+                                            src="~/Content/Images/CSS3-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We provide Azure Cloud Consulting Service" src="~/Content/Images/Azure-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We have Certified ScrumMaster to help your projects" src="~/Content/Images/CSM-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We can build your own Private Cloud using OpenStack software" src="~/Content/Images/OpenStack-300-250.png" />
+    </div>
+
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We provide Amazon Cloud and WebService Consulting" src="~/Content/Images/AWS-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We use HTML5 in our Web Design" src="~/Content/Images/HTML5-300-250.png" />
+    </div>    
+
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We are a Microsoft Certified Partner" src="~/Content/Images/MSFT-Partner-300-250.png" />
+    </div>
+    
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We provide Microsoft SQL Server Consulting" src="~/Content/Images/SQLServer-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We Design and Develop Windows Phone Applications"  src="~/Content/Images/WindowsPhone-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We Design and Develop iOS Applications" src="~/Content/Images/Apple-300-250.png" />
+    </div>
+    <div class="col-md-1-Custom">
+        <img class="img-responsive" title="We Design and Develop Android Applications" src="~/Content/Images/Android-300-250.png" />
+    </div>
+
+</div>
+
+<br />

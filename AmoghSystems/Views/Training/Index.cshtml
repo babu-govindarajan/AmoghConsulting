@@ -1,0 +1,98 @@
+﻿@using DataAccessLayer
+@model AmoghSystems.Models.TrainingOverviewModel
+
+@{
+    ViewBag.Title = "Prodigy Consulting - Software Products";
+}
+
+@section MetaDataContent{
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="TheProdigyConsulting.com - Software Products" />
+    <meta name="keywords" content="Software Development, IT Consulting, mobile application development" />
+    <meta name="author" content="Babu Govindarajan" />
+}
+
+<div class="row container">
+    <div class="col-12">        
+            <h3 class="text-primary"><b>Training</b></h3>
+
+            <p>
+                Prodigy Consulting provides on-line, in-class and on-site training you need to
+                help you master in the following domains:
+            </p>
+            <ol>
+                <li>
+                    Microsoft Technologies
+                </li>
+                <li>
+                    Java Technologies
+                </li>
+                <li>
+                    Android Platform
+                </li>
+                <li>
+                    iOS Development
+                </li>
+                <li>
+                    Agile Methodologies
+                </li>
+                <li>
+                    Enterprise Architecture
+                </li>
+            </ol>
+            <p>
+                Once you successfully complete our training, you can also volunteer to work in our products and services to gain your experience.
+            </p>
+            
+            <p>
+                With our unique training model, you get a chance to work in our real time projects. So you can apply knowledge that you gained 
+                in training to solve problems in real time products/projects and gain work experience.
+                <br />
+                <br />
+                Once you get at least six month of work experience with us, we could also help you to work for our clients.
+            </p>
+
+        
+        @foreach (KeyValuePair<DataAccessLayer.TrainingCategory, Dictionary<DataAccessLayer.TrainingSubjectCategory,
+                        List<DataAccessLayer.TrainingSubject>>> trainingCategory in Model.TrainingCategoryData)
+        {
+            Dictionary<DataAccessLayer.TrainingSubjectCategory, List<DataAccessLayer.TrainingSubject>>
+                trainingSubjectCategories = trainingCategory.Value;
+            DataAccessLayer.TrainingCategory tc = trainingCategory.Key;
+            <div class="col-md-6">
+                <div class="panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">@tc.Description</h3>
+                    </div>
+                    <div class="panel-body">
+                        @foreach (KeyValuePair<DataAccessLayer.TrainingSubjectCategory, List<DataAccessLayer.TrainingSubject>> trainingSubjectCategory in trainingSubjectCategories)
+                        {
+                            DataAccessLayer.TrainingSubjectCategory tsc = trainingSubjectCategory.Key;
+                            List<DataAccessLayer.TrainingSubject> trainingSubjects = trainingSubjectCategory.Value;
+
+                            <div>
+                                <h4 class="text-primary">@tsc.Description</h4>
+                            </div>
+                            <ul>
+                                @foreach (DataAccessLayer.TrainingSubject ts in trainingSubjects)
+                                {
+                                    <li>
+                                        <a class="btn" href="~/Training/TrainingDetails/@tsc.TrainingSubjectCategoryID/@ts.TrainingSubjectID">
+                                            @ts.SubjectName
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+           
+</div>
+
+
+
+

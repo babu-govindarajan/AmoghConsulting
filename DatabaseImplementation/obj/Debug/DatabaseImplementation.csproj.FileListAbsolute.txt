@@ -1,0 +1,14 @@
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\obj\Debug\DatabaseImplementation.csprojResolveAssemblyReference.cache
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DatabaseImplementation.dll.config
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DatabaseImplementation.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DatabaseImplementation.pdb
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DataAccessLayer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DatabaseInterface.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\EntityFramework.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DataAccessLayer.pdb
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\DatabaseInterface.pdb
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\EntityFramework.xml
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\obj\Debug\DatabaseImplementation.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseImplementation\obj\Debug\DatabaseImplementation.pdb

@@ -1,0 +1,114 @@
+﻿@using DataAccessLayer
+@model AmoghSystems.Models.RegisterTrainingModel
+
+@{
+    ViewBag.Title = "Prodigy Consulting - Register for Training";
+}
+
+@section MetaDataContent{
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="TheProdigyConsulting.com - Software Products" />
+    <meta name="keywords" content="Software Development, IT Consulting, mobile application development" />
+    <meta name="author" content="Babu Govindarajan" />
+}
+
+<div class="row container col-md-12" id="registerationHeading">
+    <div class="col-md-12">
+        <h4 class="text-primary"><b> Register for @ViewBag.SubjectName </b></h4>
+    </div>
+    
+    <br />
+    <div class="text-primary col-md-offset-2"> 
+        <b>
+            Please provide your details:
+        </b>
+    </div>
+    <br />
+    
+    @using (Html.BeginForm("Register", "Training", FormMethod.Post, new { @class="form-horizontal", role="form" }))
+    { 
+        @Html.AntiForgeryToken()      
+        <input type="hidden" name="SubjectId" value="@ViewBag.SubjectId"/> 
+        <input type="hidden" name="CourseId" value="@ViewBag.CourseId"/>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })                
+        <div class="form-group">
+            @Html.LabelFor(m => m.FirstName, new { @class = "text-primary col-md-3 control-label" })                    
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.FirstName, "", new {@class="text-danger"})
+            </div>                    
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.LastName, new { @class = "text-primary col-md-3 control-label" })                    
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LastName, "", new {@class="text-danger"})
+            </div>                    
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "text-primary col-md-3 control-label" })                    
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email, "", new {@class="text-danger"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber, new { @class = "text-primary col-md-3 control-label" })                    
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PhoneNumber, "", new {@class="text-danger"})
+            </div>
+        </div>
+                
+        <div class="form-group">
+            <label class="text-primary col-md-3 control-label">Educational Qualification:</label>            
+            <div class="col-md-7">
+                @Html.DropDownListFor(m => m.EducationalLevelSelectedId, Model.EducationalLevels)
+                @Html.ValidationMessageFor(m => m.EducationalLevels, "", new {@class="text-danger"})
+                @if (ViewBag.EducationalErrorMsg != null)
+                {
+                    <div class="text-danger">@ViewBag.EducationalErrorMsg</div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="text-primary col-md-3 control-label">IT Experience:</label>
+            <div class="col-md-7">
+                @Html.DropDownListFor(m => m.ExperienceSelectedId, Model.ExperienceLevels)   
+                @Html.ValidationMessageFor(m => m.ExperienceLevels, "", new {@class="text-danger"})      
+                @if (ViewBag.ExperienceLevelErrorMsg != null)
+                {
+                    <div class="text-danger">@ViewBag.ExperienceLevelErrorMsg</div>
+                }               
+            </div>
+        </div>
+                
+        <div class="form-group">
+            @Html.LabelFor(m => m.HowDidYouKnowUs, new { @class = "text-primary col-md-3 control-label" })                    
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.HowDidYouKnowUs, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.HowDidYouKnowUs, "", new {@class="text-danger"})
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Message, new { @class = "text-primary col-md-3 control-label" })                    
+            <div class="col-md-7">
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Message, "", new {@class="text-danger"})
+            </div>                    
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-8 col-md-10">
+                <input type="submit" class="btn btn-primary" value="Register" />
+            </div>
+        </div>
+                
+        
+    }
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

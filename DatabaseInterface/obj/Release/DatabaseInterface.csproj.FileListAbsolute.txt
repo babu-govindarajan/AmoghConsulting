@@ -1,0 +1,12 @@
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\DatabaseInterface.dll.config
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\DatabaseInterface.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\DatabaseInterface.pdb
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\DataAccessLayer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\EntityFramework.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\EntityFramework.SqlServer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\DataAccessLayer.pdb
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\EntityFramework.xml
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\bin\Release\EntityFramework.SqlServer.xml
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\obj\Release\DatabaseInterface.csprojResolveAssemblyReference.cache
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\obj\Release\DatabaseInterface.dll
+C:\Work\AmoghConsulting\AmoghSystems\DatabaseInterface\obj\Release\DatabaseInterface.pdb

@@ -1,0 +1,193 @@
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderSection("MetaDataContent", true)
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Prodigy Consulting - IT Consulting, Software Development and Training</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+            
+                <a class="navbar-brand" href="/"><img src="~/Content/Images/PC_Logo.png" alt="Prodigy Consulting"></a>               
+            </div> <!-- End of navbar-header-->
+
+            <div class="collapse navbar-collapse navbar-inverse navbar-ex1-collapse">                
+                <ul class="nav navbar-nav navbar-right ">
+                    <li>
+                        <a class="btn-default"><b> Call: +1-425-272-5341</b></a>                        
+                    </li>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right", style = "font-weight:bold" }))
+                        {
+                            @Html.AntiForgeryToken()                            
+                            <li>
+                                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage", style = "font-weight:bold" })
+                            </li>
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                            </li>
+                        }
+                    }
+                    else
+                    {                        
+                        <li>
+                            @Html.ActionLink("Sign up", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", style = "font-weight:bold" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Sign in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", style = "font-weight:bold" })
+                        </li>
+                    }
+                </ul>
+            </div> <!-- End of navbar-ex1-collapse-->
+        </nav>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-default navbar-collapse navbar-ex2-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active">
+                        @Html.ActionLink("Home", "Index", "Home")                        
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Consulting<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>                                
+                                @Html.ActionLink("Web Development", "Web", "Home")                                
+                            </li>
+                            <li>
+                                @Html.ActionLink("Public & Private Cloud", "Cloud", "Home")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Mobile Development", "Mobile", "Home")
+                            </li>
+                            <li> 
+                                @Html.ActionLink("Enterprise Architecture", "EnterpriseArchitecture", "Home")                                
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Solutions<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>                                
+                                @Html.ActionLink("eCommerce", "eCommerce", "Home")
+                            </li>
+                            <li>
+                                @Html.ActionLink("eInvoicing", "eInvoicing", "Home")                                
+                            </li>
+                            <li>
+                                @Html.ActionLink("eTimeTracking", "eTimeTracking", "Home")                                
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Training<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("IT Training", "Training/1", "Training")                                
+                            </li>
+                            <li>
+                                @Html.ActionLink("Agile", "Training/2", "Training")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Architecture", "Training/3", "Training")                                
+                            </li>
+                            <li>
+                                @Html.ActionLink("Big Data", "Training/4", "Training")
+                            </li>
+                        </ul>
+                    </li>
+                    <li>                        
+                        @Html.ActionLink("About", "About", "Home")                        
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>                        
+                        @Html.ActionLink("Blog", "Index", "Blog")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact Us", "ContactUs", "Home")
+                    </li>
+                </ul>
+            </div>  <!-- End of navbar-ex2-collapse -->
+        </nav>
+    </div>
+
+        <div class="container body-content">
+            @RenderBody()
+<br/>
+<br/>
+<br/>
+            <hr />
+
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p>&copy; 2011 - @DateTime.Now.Year Prodigy Consulting, a Amogh Systems LLC service</p>
+                        </div>
+                        <div class="col-sm-1">
+                            @Html.ActionLink("Career", "Career", "Home")
+                        </div>
+                        <div class="col-sm-2">
+                            @Html.ActionLink("Privacy Policy", "PrivacyPolicy", "Home")                            
+                        </div>                        
+                        <div class="col-sm-4">       
+                            <div>
+                                <a href="https://plus.google.com/102570272053255305115" rel="publisher">
+                                    <img class="img-responsive social-button" src="~/Content/Images/google-plus.png" />
+                                </a>
+                            </div>
+                                                  
+                            <div>
+                                <a href="https://www.linkedin.com/company/amogh-consulting-llc">
+                                    <img class="img-responsive social-button" src="~/Content/Images/linkedin.png" />
+                                </a>
+                            </div>                           
+                            
+                            <div>
+                                <a href="https://twitter.com/amoghsystems">
+                                    <img class="img-responsive social-button" src="~/Content/Images/twitter.png" />
+                                </a>
+                            </div>
+                            
+                            <div>
+                                <a href="https://www.facebook.com/pages/Amogh-Systems-LLC/460424297351608">
+                                    <img class="img-responsive social-button" src="~/Content/Images/facebook.png" />
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

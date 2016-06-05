@@ -1,0 +1,10 @@
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Work\AmoghConsulting\AmoghSystems\DataAccessLayer\obj\Release\DataAccessLayer.pdb

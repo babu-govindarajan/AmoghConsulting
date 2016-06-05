@@ -1,0 +1,102 @@
+﻿@model AmoghSystems.Models.ContactUsMessage
+
+@{
+    ViewBag.Title = "Prodigy Consulting - Contact Us.";
+}
+
+@section MetaDataContent
+{
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="description" content="TheProdigyConsulting.com - Contact Us for your Software Development and Training needs" />
+    <meta name="keywords" content="Contact Us" />
+    <meta name="author" content="Babu Govindarajan" />
+}
+
+<div class="row container" id="contactUsHeading">
+    <div class="col-md-12">
+        <h3 class="text-primary"><b> Contact Us</b></h3>
+    </div>
+
+    <br>
+    <div class="row" id="contactUs">
+        <div class=" col-md-8">
+            @using (Html.BeginForm("ContactUs", "Home", FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
+            {     
+                @Html.AntiForgeryToken()           
+                <div class="form-group">
+                    @Html.LabelFor(m => m.FirstName, new { @class="text-primary control-label"})
+                    @Html.TextBoxFor(m => m.FirstName, new {@class="form-control", @placeholder="First Name"})
+                    @Html.ValidationMessageFor(m => m.FirstName, "", new {@class="text-danger"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.LastName, new { @class="text-primary control-label"})
+                    @Html.TextBoxFor(m => m.LastName, new {@class="form-control", @placeholder="Last Name"})                    
+                    @Html.ValidationMessageFor(m =>m.LastName, "", new{@class="text-danger"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class="text-primary control-label"})
+                    @Html.TextBoxFor(m => m.Email, new {@class="form-control", @placeholder="Email"})                    
+                    @Html.ValidationMessageFor(m =>m.Email, "", new{@class="text-danger"})
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PhoneNumber, new { @class="text-primary control-label"})
+                    @Html.TextBoxFor(m => m.PhoneNumber, new {@class="form-control", @placeholder="425-555-6789", @type="tel"})                    
+                    @Html.ValidationMessageFor(m =>m.PhoneNumber, "", new{@class="text-danger"})
+                </div>
+                
+                <div class="form-group">
+                    <label class="text-primary" >Subject / Area of Interest : </label>
+                    <br />                    
+                    <div class="col-md-3">
+                        @Html.CheckBoxFor(m=>m.ItConsulting)                        
+                        @Html.LabelFor(m =>m.ItConsulting, new {@class="text-primary control-label"})                        
+                    </div>
+
+                    <div class="col-md-3">
+                        @Html.CheckBoxFor(m=>m.Solutions)
+                        @Html.LabelFor(m =>m.Solutions, new {@class="text-primary control-label"})                        
+                    </div>
+                    
+                    <div class="col-md-2">
+                        @Html.CheckBoxFor(m=>m.Training)
+                        @Html.LabelFor(m =>m.Training, new {@class="text-primary control-label"})                        
+                    </div>                      
+                </div>
+                if(@ViewBag.AreaOfInterestErrorMsg != null)
+                    {                        
+                        <div class="text-danger form-group">@ViewBag.AreaOfInterestErrorMsg</div>
+                    }
+                <div class="form-group">
+                    @Html.LabelFor(m =>m.Message, new {@class="text-primary control-label"})
+                    @Html.TextAreaFor(m=>m.Message, new {@class="form-control", @placeholder="Message", @cols="100", @rows="8"})                    
+                    @Html.ValidationMessageFor(m =>m.Message, "", new{@class="text-danger"})
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>            
+            }
+            
+        </div>
+
+        <div class="col-sm-4">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <h5 class="list-group-item-heading text-primary">Phone:</h5>
+                    <h5 class="list-group-item-text">+1-425-272-5341</h5>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="list-group-item-heading text-primary">Fax:</h5>
+                    <h5 class="list-group-item-text">+1-866-425-2399</h5>
+                </div>
+                <div class="list-group-item">
+                    <h5 class="list-group-item-heading text-primary">Email:</h5>
+                    <a class="list-group-item-text" href="mailto:info@amoghsystems.com">info@amoghsystems.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

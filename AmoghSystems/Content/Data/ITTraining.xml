@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Training>
+  <CourseName>
+    Web Development using ASP.NET MVC
+  </CourseName>
+  <PreRequisites>
+    <PreRequisite>Intermediate Level Understanding in C#</PreRequisite>
+    <PreRequisite>HTML and Cascade Style Sheet</PreRequisite>
+    <PreRequisite>HTTP Protocol</PreRequisite>
+  </PreRequisites>
+  <Syllabuses>
+    <Syllabus>MVC Controller</Syllabus>
+    <Syllabus>Razor View</Syllabus>
+    <Syllabus>Models</Syllabus>
+    <Syllabus>MVC Design Pattern</Syllabus>
+  </Syllabuses>
+  <Duration>
+    <StartDate></StartDate>
+    <EndDate></EndDate>
+    <Timings>
+      <Timing>Saturday 10:00AM to 12:00 noon</Timing>
+      <Timing>Wednesday 6:00AM to 7:00PM</Timing>
+    </Timings>
+  </Duration>
+  <Locations>
+    <Location>Bothell, WA</Location>    
+  </Locations>
+</Training>
